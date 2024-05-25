@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Aleo:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #151515;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #8576FF;
+    --cor-hover: #232323;
+
+    --fonte-primaria: "IBM Plex Sans", sans-serif;
+    --fonte--titulo: "Aleo", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.fundo{
+    background-color: var(--cor-primaria);
+    background-image: url("../assets/geral/Fundo.svg");
+}
+
+.opacidade{
+    background: rgba(0,0,0,0.8);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+}
+
+
+.cabecalho{
+    padding-top: 5%;
+    position: relative;
+}
+
+.cabecalho_menu {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.cabecalho_menu--mobile{
+    display: none;
+}
+
+.invisivel{
+     display: none;
+}
+
+.botao_menu{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.cabecalho_menu_page,
+.cabecalho_menu_atual{
+    display: flex;
+    gap: 0.2rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    border-bottom: 0.2rem solid transparent;
+    padding-bottom: 0.3rem;
+}
+
+.cabecalho_menu_atual{
+    border-bottom: 0.2rem solid var(--cor-terciaria);
+    padding-bottom: 0.3rem;
+}
+
+
+.conteudo{
+    padding: 9% 3%;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.conteudo_projetos{
+    width: auto;
+    padding: 9% 3%;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.conteudo_imagens{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagem_bloco{
+    width: auto;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--cor-terciaria);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.imagem_projeto{
+    width: 100%;
+}
+
+.conteudo_perfil{
+    width: 50%;
+}
+
+.conteudo_texto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.conteudo_texto_titulo{
+    font-family: var(--fonte--titulo);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+}
+
+#nome_titulo:after{
+    content: "_";
+    animation: piscar 0.7s infinite;
+}
+
+.conteudo_texto_paragrafo{
+    line-height: 140%;
+}
+
+.conteudo_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.conteudo_links_titulo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.conteudo_links_botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    width: 60%;
+    padding: 16px;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.conteudo_links_botao:hover{
+    background: rgba(50,50,50,0.3);
+}
+
+.conteudo_experiencias{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.experiencias_linguagens{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagem_exp{
+    width: 9rem;
+}
+
+
+.rodape{
+    border-top: 0.1rem solid var(--cor-terciaria);
+    padding: 1.5% 0%;
+    display: flex;
+    gap: 1%;
+}
+
+.rodape_imagens{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.img{
+    width: 15%;
+}
+
+.rodape_nome{
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+
+/*TABLET RESPONSIVO*/
+@media (max-width: 1100px) {
+    .cabecalho{
+        padding-top: 5%;
+    }
+
+    .conteudo{
+        flex-direction: column-reverse;
+        margin: 0% 3%;
+        padding: 6% 3%;
+        gap: 3rem;
+    }
+
+    .conteudo_texto{
+        width: 100%;
+    }
+
+    .conteudo_perfil{
+        width: 50%;
+    }
+
+    .conteudo_projetos{
+        margin: 0% 3%;
+        gap: 3rem;
+    }
+
+    .conteudo_imagens{
+        flex-wrap: wrap;
+    }
+
+    .imagem_bloco{
+        width: 45%;
+        margin-right: 0;
+        gap: 1rem;
+        padding-bottom: 4%;
+    }
+
+    .imagem_projeto{
+        width: 100%;
+    }
+
+    .conteudo_experiencias{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .experiencias_linguagens{
+        gap: 3rem;
+    }
+
+    .imagem_exp{
+        width: 100%;
+    }
+
+    .rodape{
+        flex-direction: column;
+        padding: 2% 0%;
+        gap: 1rem;
+    }
+
+    .img{
+        width: 10%;
+    }
+}
+
+/*CELULAR RESPONSIVO*/
+@media (max-width: 550px) {
+    .cabecalho{
+        padding-top: 8%;
+    }
+
+    .cabecalho_menu{
+        display: none;
+    }
+
+    .cabecalho_menu--mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0% 0 7% 0;
+        border-bottom: 0.13rem solid var(--cor-terciaria);
+    }
+
+    .botao_menu{
+        display: initial;
+    }
+
+    .conteudo{
+        margin: 0% 3%;
+        padding: 9% 3%;
+        gap: 2rem
+    }
+
+    .conteudo_perfil{
+        width: 65%;
+    }
+
+    .conteudo_experiencias{
+        gap: 1rem;
+    }
+
+    .experiencias_linguagens{
+        gap: 1rem;
+    }
+
+    .conteudo_imagens{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem_bloco{
+        width: 100%;
+        gap: 1rem;
+        padding-bottom: 8%;
+    }
+
+    .rodape{
+        padding: 3% 0%;
+    }
+
+    .rodape_imagens{
+        gap: 5rem;
+    }
+
+    .img{
+        width: 15%;
+    }
+}
+
+@keyframes piscar {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
